@@ -1,0 +1,271 @@
+{
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "files.autoSave": "afterDelay",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "files.autoGuessEncoding": true,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
+  "editor.guides.bracketPairs": true,
+  "window.dialogStyle": "custom",
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 15,
+  "vim.useSystemClipboard": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.inlineSuggest.enabled": true,
+
+  "editor.tabCompletion": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.minimap.enabled": false,
+
+  "editor.stickyScroll.enabled": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.padding": false,
+
+  "systemverilog.includeIndexing": ["**/*.{sv,svh}"],
+  "systemverilog.excludeIndexing": ["test/**/*.sv*"],
+  "systemverilog.defines": [],
+  "systemverilog.launchConfiguration": "/toolserilator -sv -Wall --lint-only",
+  "systemverilog.formatCommand": "/toolserible-verilog-format",
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+
+  "workbench.list.automaticKeyboardNavigation": false,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-i>": true,
+    "<C-o>": true,
+    "<C-r>": true,
+    "<C-s>": false,
+    "<C-v>": true,
+    "<C-w>": true,
+    "<C-u>": false,
+    "<C-d>": false
+  },
+
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true, // to avoid fold open up autocamatically
+  "vim.sneak": false,
+  "vim.surround": true,
+  "vim.useCtrlKeys": true,
+
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+
+  "vim.normalModeKeyBindings": [
+    {
+      // which key
+      "before": [";"],
+      "commands": ["whichkey.show"]
+    },
+
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.toggleAuxiliaryBar"]
+    },
+
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.view.search"]
+    },
+
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+
+    /*{
+      "before": ["<leader>", "t", "n"],
+      "commands": ["workbench.action.quickopenNavigateNextInEditorPicker"]
+    }*/
+
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+
+    {
+      "before": ["<leader>", "s", "x"],
+      "commands": ["workbench.action.closeEditorsInOterGroups"]
+    },
+
+    {
+      "before": ["<leader>", "t", "n"],
+      "commands": ["workbench.action.quickOpenNavigateNext"]
+    }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+
+    // -- run
+    {
+      "before": ["<leader>", "r"],
+      "commands": ["workbench.action.files.save", "workbench.action.debug.run"]
+    },
+    {
+      "before": ["<leader>", "d", "r"],
+      "commands": [
+        "workbench.action.files.save",
+        "workbench.action.debug.start"
+      ]
+    },
+    // -- debug
+    {
+      "before": ["<leader>", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<leader>", "d", "c"],
+      "commands": ["editor.debug.action.conditionalBreakpoint"]
+    },
+    // -- problem nav
+    // fix <C-d> and <C-u>
+    {
+      "before": ["<leader>", "d", "k"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["<leader>", "d", "j"],
+      "commands": ["editor.action.marker.next"]
+    },
+    // -- git hunk nav
+    {
+      "before": ["<leader>", "k"],
+      "commands": [
+        "workbench.action.editor.previousChange",
+        "editor.action.dirtydiff.previous"
+      ]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": [
+        "workbench.action.editor.nextChange",
+        "editor.action.dirtydiff.next"
+      ]
+    },
+
+    {
+      "before": ["<leader>", "h", "r"],
+      "commands": ["git.revertSelectedRanges"]
+    },
+    // -- rename symbol
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    // Search
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["extension.searchUnderCursor"]
+    }
+  ],
+
+  "vim.visualModeKeyBindings": [
+    {
+      // which key
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    }
+  ],
+
+  "whichkey.bindings": [
+    {
+      "key": "e",
+      "name": "Show tree/explorer view",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "workbench.view.explorer"
+        },
+        {
+          "key": "when:sideBarVisible && explorerViewletVisible",
+          "name": "Hide explorer",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ]
+    },
+    {
+      "key": "o",
+      "name": "Outline",
+      "type": "command",
+      "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+      "key": "h",
+      "name": "bookmark",
+      "type": "command",
+      "command": "lineHighlightBookmark.toogleBookmarks"
+    },
+    {
+      "key": "g",
+      "name": "Source contrl",
+      "type": "command",
+      "command": "workbench.view.scm"
+    },
+    {
+      "command": "workbench.action.quickOpen",
+      "key": "f",
+      "name": "Find file",
+      "type": "command"
+    },
+    {
+      "command": "workbench.view.search",
+      "key": "F",
+      "name": "Search Word",
+      "type": "command"
+    }
+  ],
+  "editor.fontSize": 18
+}
