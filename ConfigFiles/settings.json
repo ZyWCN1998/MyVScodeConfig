@@ -36,7 +36,7 @@
   "systemverilog.launchConfiguration": "/toolserilator -sv -Wall --lint-only",
   "systemverilog.formatCommand": "/toolserible-verilog-format",
   "[c]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
@@ -54,7 +54,6 @@
     "editor.formatOnType": true
   },
 
-  "workbench.list.automaticKeyboardNavigation": false,
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
@@ -105,11 +104,6 @@
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
-
-    /*{
-      "before": ["<leader>", "t", "n"],
-      "commands": ["workbench.action.quickopenNavigateNextInEditorPicker"]
-    }*/
 
     {
       "before": ["<leader>", "s", "v"],
@@ -267,5 +261,10 @@
       "type": "command"
     }
   ],
-  "editor.fontSize": 18
+  "editor.fontSize": 18,
+  "clangd.path": "c:\\Users\\Zhiyuan Wu\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\16.0.2\\clangd_16.0.2\\bin\\clangd.exe",
+  "C_Cpp.default.compilerPath": "c:\\Program Files\\mingw64\\bin\\gcc.exe",
+  "debug.onTaskErrors": "abort",
+  "workbench.iconTheme": "material-icon-theme",
+  "security.workspace.trust.untrustedFiles": "open"
 }
