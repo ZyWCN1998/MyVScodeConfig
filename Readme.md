@@ -1,4 +1,4 @@
-# 20230822 VSCode DIY2
+# Readme VSCode Vim-like DIY
 
 由于不可避免的需要在Windows下处理一些代码（笔记本还没装虚拟机），而且VScode中有一个HDL插件比较好用，花了两天时间大概配置了一下VScode。配置成了Vim like的VScode。这个文档简单记录下配置内容。
 
